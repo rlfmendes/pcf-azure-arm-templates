@@ -71,7 +71,7 @@
     {
       "name": "AllowWebAndSSH",
       "type": "Microsoft.Network/networkSecurityGroups",
-      "apiVersion": "2017-03-01",
+      "apiVersion": "2015-06-15",
       "location": "[parameters('location')]",
       "tags": {
         "Environment": "[parameters('environment')]"
@@ -126,7 +126,7 @@
     {
       "name": "AllowWeb",
       "type": "Microsoft.Network/networkSecurityGroups",
-      "apiVersion": "2017-03-01",
+      "apiVersion": "2015-06-15",
       "location": "[parameters('location')]",
       "tags": {
         "Environment": "[parameters('environment')]"
@@ -167,7 +167,7 @@
     {
       "name": "PCF",
       "type": "Microsoft.Network/virtualNetworks",
-      "apiVersion": "2017-03-01",
+      "apiVersion": "2015-06-15",
       "location": "[parameters('Location')]",
       "tags": {
         "Environment": "[parameters('environment')]"
@@ -215,7 +215,7 @@
     {
       "type": "Microsoft.Network/publicIPAddresses",
       "name": "OpsManPublicIP",
-      "apiVersion": "2017-03-01",
+      "apiVersion": "2015-06-15",
       "location": "[parameters('location')]",
       "tags": {
         "Environment": "[parameters('environment')]"
@@ -231,7 +231,7 @@
     {
       "type": "Microsoft.Network/publicIPAddresses",
       "name": "ERTPublicIP",
-      "apiVersion": "2017-03-01",
+      "apiVersion": "2015-06-15",
       "location": "[parameters('location')]",
       "tags": {
         "Environment": "[parameters('environment')]"
