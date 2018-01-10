@@ -247,7 +247,7 @@
     {
       "name": "[variables('lbName')]",
       "type": "Microsoft.Network/loadBalancers",
-      "apiVersion": "2017-03-01",
+      "apiVersion": "2015-06-15",
       "location": "[parameters('location')]",
       "tags": {
         "Environment": "[parameters('environment')]"
@@ -350,7 +350,7 @@
     {
       "name": "OpsManNic",
       "type": "Microsoft.Network/networkInterfaces",
-      "apiVersion": "2017-03-01",
+      "apiVersion": "2015-06-15",
       "location": "[parameters('location')]",
       "tags": {
         "Environment": "[parameters('environment')]"
