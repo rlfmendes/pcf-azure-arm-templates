@@ -57,7 +57,7 @@
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
-      "name": "[concat('pcfblobs', uniqueString(subscription().id))]",
+      "name": "[concat('pcfblobs', concat(uniqueString(subscription().id),uniqueString(resourceGroup().id)))]",
       "apiVersion": "2016-01-01",
       "location": "[parameters('location')]",
       "tags": {
