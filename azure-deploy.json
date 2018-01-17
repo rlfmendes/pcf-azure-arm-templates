@@ -81,7 +81,7 @@
           {
             "properties": {
               "description": "Allow Inbound HTTP",
-              "protocol": "TCP",
+              "protocol": "Tcp",
               "sourcePortRange": "*",
               "destinationPortRange": "80",
               "sourceAddressPrefix": "*",
@@ -95,7 +95,7 @@
           {
             "properties": {
               "description": "Allow Inbound HTTPS",
-              "protocol": "TCP",
+              "protocol": "Tcp",
               "sourcePortRange": "*",
               "destinationPortRange": "443",
               "sourceAddressPrefix": "*",
@@ -109,7 +109,7 @@
           {
             "properties": {
               "description": "Allow Inbound SSH",
-              "protocol": "TCP",
+              "protocol": "Tcp",
               "sourcePortRange": "*",
               "destinationPortRange": "22",
               "sourceAddressPrefix": "*",
@@ -136,7 +136,7 @@
           {
             "properties": {
               "description": "Allow Inbound HTTP",
-              "protocol": "TCP",
+              "protocol": "Tcp",
               "sourcePortRange": "*",
               "destinationPortRange": "80",
               "sourceAddressPrefix": "*",
@@ -150,7 +150,7 @@
           {
             "properties": {
               "description": "Allow Inbound HTTPS",
-              "protocol": "TCP",
+              "protocol": "Tcp",
               "sourcePortRange": "*",
               "destinationPortRange": "443",
               "sourceAddressPrefix": "*",
@@ -284,7 +284,7 @@
               "probe": {
                 "id": "[variables('probeID')]"
               },
-              "protocol": "TCP",
+              "protocol": "Tcp",
               "loadDistribution": "SourceIP",
               "frontendPort": 443,
               "backendPort": 443,
@@ -301,7 +301,7 @@
               "backendAddressPool": {
                 "id": "[variables('ertBackEndConfig')]"
               },
-              "protocol": "TCP",
+              "protocol": "Tcp",
               "loadDistribution": "SourceIP",
               "frontendPort": 80,
               "backendPort": 80,
@@ -321,7 +321,7 @@
               "backendAddressPool": {
                 "id": "[variables('ertBackEndConfig')]"
               },
-              "protocol": "TCP",
+              "protocol": "Tcp",
               "loadDistribution": "SourceIP",
               "frontendPort": 2222,
               "backendPort": 2222,
@@ -380,7 +380,7 @@
       }
     },
     {
-      "apiversion": "2016-03-30",
+      "apiVersion": "2016-03-30",
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[variables('opsManVMName')]",
       "location": "[parameters('location')]",
@@ -395,7 +395,7 @@
           "computerName": "pcfopsman",
           "adminUsername": "ubuntu",
           "linuxConfiguration": {
-            "disablePasswordAuthentication": "true",
+            "disablePasswordAuthentication": true,
             "ssh": {
               "publicKeys": [
                 {
@@ -418,7 +418,7 @@
             },
             "caching": "ReadWrite",
             "createOption": "FromImage",
-            "diskSizeGB": "120"
+            "diskSizeGB": 120
           }
         },
         "networkProfile": {
